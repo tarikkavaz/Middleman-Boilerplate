@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/tr/">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
+        aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-dark px-4" id="mainMenu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <%= active_class 'Anasayfa', '/tr/', :class => 'nav-link' %>
+            </li>
+            <li class="nav-item">
+                <%= active_class 'Hakkında', '/tr/hakkinda/', :class => 'nav-link'  %>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Altmenü Başlığı
+                </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <%= active_class 'Hakkında', '/tr/hakkinda/', :class => 'dropdown-item'  %>
+                    <%= active_class 'Alt Klasör', '/tr/subfolder/', :class => 'dropdown-item'  %>
+                    <%= active_class 'Alt Klasör Alt', '/tr/subfolder/alt/', :class => 'dropdown-item'  %>
+                    <div class="dropdown-divider"></div>
+                    <%= active_class 'Fonts & Icons', '/tr/fonts/', :class => 'dropdown-item'  %>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://github.com/tarikkavaz/Middleman-Boilerplate" target="_blank">Repo</a>
+                    <a class="dropdown-item" href="https://middlemanapp.com/basics/install/" target="_blank">Middleman Docs</a>
+                    
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto pr-1">
+            <li class="nav-item text-right">
+                <a class="nav-link" href="<%= yield_content :lang_url %>"><%= yield_content :lang_title %></a>
+            </li>
+        </ul>
+    </div>
+</nav>

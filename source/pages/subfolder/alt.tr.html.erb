@@ -1,0 +1,17 @@
+---
+layout: "layout-tr"
+title: Alt Klasör Alt dosya olarak
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate commodi animi, incidunt assumenda ea, libero corporis neque et saepe, placeat reiciendis ratione dicta. Quam error cum porro vitae laudantium voluptates.
+---
+<% content_for :lang_url do %>/en/subfolder/alt/<% end %>
+<% content_for :lang_title do %>English<% end %>
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-12 order-0 order-md-0">
+            <h1><%= current_page.data.title %></h1>
+            <hr>
+            <p><%= current_page.data.description %></p>
+            <hr>
+        </div>
+    </div>
+</div>

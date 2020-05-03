@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="/en/">Logo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
+        aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-dark px-4" id="mainMenu">
+        <ul class="navbar-nav mr-auto">
+            <%= nav_item_link_to 'Home', '/en/', :class => 'nav-link'  %>
+            <%= nav_item_link_to 'About', '/en/about/', :class => 'nav-link'  %>
+            <%= nav_item_link_to 'Blog', '/blog/', :class => 'nav-link'  %>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <%= active_class 'About', '/en/about/', :class => 'dropdown-item'  %>
+                    <%= active_class 'Subfolder', '/en/subfolder/', :class => 'dropdown-item'  %>
+                    <%= active_class 'Subfolder Alt', '/en/subfolder/alt/', :class => 'dropdown-item'  %>
+                    <div class="dropdown-divider"></div>
+                    <%= active_class 'Fonts & Icons', '/en/fonts/', :class => 'dropdown-item'  %>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="https://github.com/tarikkavaz/Middleman-Boilerplate" target="_blank">Repo</a>
+                    <a class="dropdown-item" href="https://middlemanapp.com/basics/install/" target="_blank">Middleman Docs</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto pr-1">
+            <li class="nav-item text-right">
+                <a class="nav-link" href="<%= yield_content :lang_url %>"><%= yield_content :lang_title %></a>
+            </li>
+        </ul>
+    </div>
+</nav>

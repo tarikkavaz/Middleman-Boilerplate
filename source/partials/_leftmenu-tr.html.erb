@@ -1,0 +1,26 @@
+<div class="d-md-flex py-2" id="sidemenu">
+    <ul class="nav flex-column flex-nowrap w-100 px-2">
+        <%= nav_item_link_to 'Hakkında', '/tr/hakkinda/', :class => 'nav-link'  %>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#submenu1" data-toggle="collapse" data-target="#submenu1">Altmenü Başlığı</a>
+            <div class="collapse <%= yield_content :subm1_show %>" id="submenu1" aria-expanded="false">
+                <ul class="flex-column nav">
+                    <%= nav_item_link_to 'JSON with data_source', '/tr/json_data_source/', :class => 'nav-link'  %>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1">Altmenü Alt</a>
+                        <div class="collapse <%= yield_content :subm1a_show %>" id="submenu1sub1" aria-expanded="false">
+                            <ul class="flex-column nav">
+                                <%= nav_item_link_to 'JSON with js', '/tr/json_js/', :class => 'nav-link'  %>
+                                <%= nav_item_link_to 'Menü Başlığı', '#', :class => 'nav-link'  %>
+                                <%= nav_item_link_to 'Menü Başlığı', '#', :class => 'nav-link'  %>
+                                <%= nav_item_link_to 'Menü Başlığı', '#', :class => 'nav-link'  %>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <%= nav_item_link_to 'Menü Başlığı', '#', :class => 'nav-link'  %>
+        <%= nav_item_link_to 'Menü Başlığı', '#', :class => 'nav-link'  %>
+    </ul>
+</div>

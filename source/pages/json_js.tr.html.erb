@@ -1,0 +1,28 @@
+---
+layout: "layout-tr"
+title: Remote JSON data with JS
+description: Data from https://newtablab.com/test/db.json See source/statics/js/custom.js
+---
+<% content_for :lang_url do %>/en/json_js/<% end %>
+<% content_for :lang_title do %>English<% end %>
+<% content_for :subm1_show do %>show<% end %>
+<% content_for :subm1a_show do %>show<% end %>
+
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-12 order-0 order-lg-0">
+            <h1><%= current_page.data.title %></h1>
+            <hr>
+        </div>
+        <div class="col-lg-3 order-2 order-lg-1">
+            <%= partial "partials/_leftmenu-tr" %>
+        </div>
+        <div class="col-lg-9 order-1 order-lg-2">
+            <p>Data from <code>https://newtablab.com/test/db.json</code> See <code>source/statics/js/custom.js</code></p>
+            <hr>
+            <ul id="remote-posts"></ul>
+            <ul id="remote-fruits"></ul>
+            <ul id="remote-people"></ul>
+        </div>
+    </div>
+</div>

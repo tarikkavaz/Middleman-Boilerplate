@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<%= partial "partials/_meta" %>
+
+<body class="d-flex flex-column h-100">
+
+    <%= partial "partials/_topnav-en" %>
+    
+    <main role="main">
+        <%= yield %>
+    </main>
+
+    <%= partial "partials/_footer-en" %>
+
+    <%= javascript_include_tag "site" %>
+</body>
+
+</html>

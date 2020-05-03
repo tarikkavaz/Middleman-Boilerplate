@@ -1,0 +1,63 @@
+---
+title: Blog
+pageable: true
+per_page: 10
+---
+<!doctype html>
+<html>
+
+<%= partial "partials/_meta" %>
+
+<body class="d-flex flex-column h-100">
+
+    <%= partial "partials/_topnav-en" %>
+    <main role="main">
+        <div class="container" id="content">
+            <h1>Blog Index</h1>
+            <hr class="pb-3">
+            <% page_articles.each_with_index do |article, i| %>
+            <div class="row blogindex border-bottom pt-3">
+                <div class="col-12">
+                    <h2><%= link_to article.title, article %></h2>
+                    
+                    <div class="row my-2">
+                        <div class="col"><%= article.date.strftime('%d.%m.%Y') %> - <%= article.date.strftime('%H:%M') %></div>
+                        <div class="col text-right">
+                            <% article.tags.each_with_index do |tag, articles| %>
+                                <span class="badge badge-primary"><%= tag %></span> 
+                            <% end %>
+                        </div>
+                    </div>
+                    <div><%= article.summary %></div>
+                    <p><%= link_to 'Read more…', article %></p>
+                </div>
+            </div>
+            <% end %>
+
+            <nav aria-label="navigation" class="mt-5">
+                <ul class="pagination justify-content-center">
+                <% if paginate && num_pages > 1 %>
+
+                    <% if prev_page %>
+                        <li class="page-item"><%= link_to ' <i class="fas fa-angle-left"></i>', prev_page, :class => 'page-link' %></li>
+                    <% end %>
+
+                    <li class="page-item disabled"><span class="page-link"><%= page_number %> of <%= num_pages %></span></li>
+                <% end %>
+
+                <% if paginate %>
+                    <% if next_page %>
+                        <li class="page-item"><%= link_to '<i class="fas fa-angle-right"></i> ', next_page, :class => 'page-link'  %></li>
+                    <% end %>
+                <% end %>
+                </ul>
+            </nav>
+
+        </div>
+    </main>
+    <%= partial "partials/_footer-en" %>
+
+    <%= javascript_include_tag "site" %>
+</body>
+
+</html>

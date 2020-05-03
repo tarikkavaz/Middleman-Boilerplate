@@ -1,0 +1,20 @@
+// Bootstrap Variables
+$theme-colors: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    danger: $danger,
+    warning: $warning,
+    info: $info,
+    light: $light,
+    dark: $dark,
+);
+
+
+//Fancybox GFX's
+#fancybox-loading div, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url('../gfx/fancybox_sprite.png') !important;
+}
+.fancybox-overlay {
+    background-image: url('../gfx/fancybox_overlay.png');
+}

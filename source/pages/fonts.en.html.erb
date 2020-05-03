@@ -1,0 +1,83 @@
+---
+layout: "layout-en"
+title: Fonts & Icons
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate commodi animi, incidunt assumenda ea, libero corporis neque et saepe, placeat reiciendis ratione dicta. Quam error cum porro vitae laudantium voluptates.
+---
+<% content_for :lang_url do %>/tr/fonts/<% end %>
+<% content_for :lang_title do %>Türkçe<% end %>
+
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-12 order-0 order-md-0">
+            <h1><%= current_page.data.title %></h1>
+            <hr>
+            <h2>Fonts</h2>
+            <div id="fonts">
+                <h3>h3. Bootstrap heading</h3>
+                <h4>h4. Bootstrap heading</h4>
+                <h5>h5. Bootstrap heading</h5>
+                <h6>h6. Bootstrap heading</h6>
+                <hr>
+                <h3>
+                    Fancy display heading
+                    <small class="text-muted">With faded secondary text</small>
+                </h3>
+                <hr>
+                <dl class="row">
+                <dt class="col-sm-3">Description lists</dt>
+                <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+                <dt class="col-sm-3">Euismod</dt>
+                <dd class="col-sm-9">
+                    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+                    <p>Donec id elit non mi porta gravida at eget metus.</p>
+                </dd>
+
+                <dt class="col-sm-3">Malesuada porta</dt>
+                <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+                <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+                <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+
+                <dt class="col-sm-3">Nesting</dt>
+                <dd class="col-sm-9">
+                    <dl class="row">
+                    <dt class="col-sm-4">Nested definition list</dt>
+                    <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+                    </dl>
+                </dd>
+                </dl>
+                <hr>
+                <p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+<pre><code>&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;And another line of sample text here...&lt;/p&gt;
+</code></pre>
+                <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+                <hr>
+                <blockquote class="blockquote">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <span class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></span>
+                </blockquote>
+                <hr>
+                
+                <h2>Subheader h2</h2>
+                <p><strong>Bushwick Banksy</strong> tattooed raw <em>denim polaroid</em>, hoodie seitan small batch Pinterest kitsch High Life ennui try-hard banh mi brunch. Actually slow-carb skateboard, Bushwick pickled paleo asymmetrical synth 8-bit typewriter sustainable before they sold out locavore. Single-origin coffee flexitarian gastropub Marfa keffiyeh, kogi cardigan craft beer fashion axe shabby chic American Apparel. Flannel next level fap jean shorts deep v, occupy DIY art party 3 wolf moon freegan twee tousled craft beer. Chambray food truck typewriter, yr direct trade deep v blog. Cliche literally gentrify YOLO. Mumblecore gluten-free forage, readymade blog hashtag chia.</p>
+                <h3>Subheader h3</h3>
+                <ul>
+                    <li><strong>Hella</strong> direct trade letterpress,</li>
+                    <li>raw denim occupy Vice <em>iPhone locavore</em> chillwave sriracha banh mi</li>
+                    <li>Echo Park stumptown PBR. Flannel fixie narwhal</li>
+                    <li>whatever before they <u>sold out hoodie </u>hashtag Bushwick chia messenger bag shabby chic Truffaut Brooklyn slow-carb swag. Letterpress slow-carb <a href="#">Etsy wayfarers</a>, fashion axe Bushwick chambray gluten-free beard fingerstache</li>
+                    <li>Disrupt master cleanse authentic ennui 8-bit</li>
+                </ul>
+                <h4>Subheader h4</h4>
+                <p>Deep v you probably haven't heard of them PBRB polaroid sriracha. <strong><em>Organic cardigan Marfa</em></strong>, ennui sriracha locavore post-ironic jean shorts Austin banjo viral letterpress photo booth literally. Put a bird on it four loko McSweeney's Brooklyn irony, chambray dreamcatcher mixtape. Small batch squid <u>American Apparel chia cray</u>, next level lomo artisan PBRB aesthetic food truck gastropub wolf Thundercats. YOLO salvia Cosby sweater forage, retro Pinterest organic cred post-ironic pop-up cliche vinyl kale chips church-key ethical. Fashion axe semiotics Vice PBR leggings butcher. Helvetica disrupt cliche lomo.</p>
+            </div>
+            <hr>
+            <h2>FontAwsome</h2>
+            <div id="icons">
+            <%= partial "partials/_fa-icons" %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<%= partial "partials/_meta" %>
+
+<body class="d-flex flex-column h-100">
+
+    <%= partial "partials/_topnav-en" %>
+    <main role="main">
+        <div class="container" id="content">
+            <div class="row">
+                <div class="col-md-8 article">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1><%= current_article.title unless current_article.nil? %></h1>
+                            <div class="row my-2 pb-2 mb-3 border-bottom">
+                                <div class="col">
+                                    <%= current_article.date.strftime('%d.%m.%Y') %> - <%= current_article.date.strftime('%H:%M') %>
+                                </div>
+                                <div class="col text-right">
+                                    <% current_article.tags.each do |tag, articles| %>
+                                        <a href="<%= tag_path(tag) %>" class="badge badge-primary"><%= tag %></a>
+                                    <% end %>
+                                </div>
+                            </div>
+                            <%= yield %>
+
+                            <div class="row border-top pt-4">
+                                <div class="col">
+                                    <% prev_post = current_article.article_previous %>
+                                    <% if prev_post %>
+                                    Previous article<br>
+                                    <a href="<%= prev_post.url %>" rel="prev" title="Previous article: <%= prev_post.title %>"> 
+                                    <%= prev_post.title %></a>
+                                    <% end %>
+                                </div>
+                                
+                                <div class="col text-right">
+                                    <% next_post = current_article.article_next %>
+                                    <% if next_post %>
+                                    Next article<br>
+                                    <a href="<%= next_post.url %>" rel="next" title="Next article: <%= next_post.title %>">
+                                    <%= next_post.title %></a>
+                                    <% end %>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 archive">
+                    <h4 class="text-center">Recent Articles</h4>
+                        <ul class="list-group list-group-flush">
+                        <% blog.articles[0...5].each do |article| %>
+                            <li class="list-group-item">
+                                <%= link_to article.title, article %>
+                                <span class="d-block"><small><%= article.date.strftime('%d.%m.%Y') %> - <%= article.date.strftime('%H:%M') %></small></span>
+                            </li>
+                        <% end %>
+                        </ul>
+                    <div class="recentlist">
+                        <h4 class="text-center">Tags</h4>
+                        <div class="ml-4">
+                            <% blog.tags.each do |tag, articles| %>
+                            <%= link_to "#{tag} <span>#{articles.size}</span>", tag_path(tag), :class => 'badge badge-primary' %>
+                            <% end %>
+                        </div>
+                    </div>
+                    <div class="recentlist">
+                        <h4 class="text-center">Archive</h4>
+                        <div class="ml-4">
+                            <% blog.articles.group_by {|y| y.date.year }.each do |year, articles| %>
+                            <a href="<%= blog_year_path(year) %>" class="badge badge-dark mt-3"><%= year %> <%= "<small>#{articles.size}</small>" %></a>
+                            <div>
+                                <% articles.group_by {|a| a.date.month}.each do |month, month_articles| %>
+                                <div>
+                                    <%= link_to month_articles.first.date.strftime("%B <small>#{month_articles.size}</small>"), blog_month_path(year, month),:class => 'badge badge-secondary' %> 
+                                        <% month_articles.group_by {|d| d.date.day}.each do |day, day_articles| %>
+                                        <%= link_to day_articles.first.date.strftime("%d <small>#{day_articles.size}</small>"), blog_day_path(year, month, day),:class => 'badge badge-Light' %>
+                                        <% end %>
+                                    <% end %>
+                                </div>
+                            </div>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <%= partial "partials/_footer-en" %>
+
+    <%= javascript_include_tag "site" %>
+</body>
+
+</html>

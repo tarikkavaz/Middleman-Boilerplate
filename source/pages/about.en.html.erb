@@ -1,0 +1,32 @@
+---
+layout: "layout-en"
+title: About
+description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate commodi animi, incidunt assumenda ea, libero corporis neque et saepe, placeat reiciendis ratione dicta. Quam error cum porro vitae laudantium voluptates.
+---
+<% content_for :lang_url do %>/tr/hakkinda/<% end %>
+<% content_for :lang_title do %>Türkçe<% end %>
+
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-12 order-0 order-lg-0">
+            <h1><%= current_page.data.title %></h1>
+            <hr>
+        </div>
+        <div class="col-lg-3 order-2 order-lg-1">
+            <%= partial "partials/_leftmenu-en" %>
+        </div>
+        <div class="col-lg-9 order-1 order-lg-2">
+            <%# <h2>Instagram Data</h2> %>
+            <p><%= current_page.data.description %></p>
+            <hr>
+            <div id="gallery">
+                <a href="/statics/img/1.jpg" class="fancybox" rel="gallery"  title="Test Image 1">
+                <img src="/statics/img/1.jpg" class="img-responsive"/></a>
+                <a href="/statics/img/2.jpg" class="fancybox" rel="gallery"  title="Test Image 2">
+                <img src="/statics/img/2.jpg" class="img-responsive"/></a>
+                <a href="/statics/img/3.jpg" class="fancybox" rel="gallery"  title="Test Image 3">
+                <img src="/statics/img/3.jpg" class="img-responsive"/></a>
+            </div>
+        </div>
+    </div>
+</div>
