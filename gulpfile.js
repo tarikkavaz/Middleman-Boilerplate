@@ -27,7 +27,7 @@ gulp.task('icons', function() {
         .pipe(gulp.dest('source/statics/webfonts/'));
 });
 
-// Static Server + watching scss/html files
+// Static Server + watching js/erb files
 gulp.task('serve', function() {
 
     browserSync.init({
