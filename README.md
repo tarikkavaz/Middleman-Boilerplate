@@ -16,8 +16,8 @@ Runs on:
 
 - Ruby v2.6.2
 - Middleman v4.3.6
-- Bootstrap v4.4.0
-- jQuery v3.4.1 (_v3.5.0 does not work with Bootstrap 4_)
+- Bootstrap v4.4.1
+- jQuery v3.5.1
 - popper.js v1.16.0
 - Font Awesome Free v5.13.0
 - jquery-fancybox v3.1.0
