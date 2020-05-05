@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.0",
-    "jquery": "3.4.1",
+    "jquery": "3.5.1",
     "popper.js": "^1.16.0",
     "jquery-fancybox": "^3.1.0",
     "retinajs": "^2.1.3",
