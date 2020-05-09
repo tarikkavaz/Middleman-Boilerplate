@@ -1,7 +1,6 @@
 var gulp        = require('gulp');
 var concat      = require('gulp-concat')
 var uglify      = require('gulp-terser')
-// var sourcemaps  = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
 
 
@@ -21,24 +20,17 @@ gulp.task('js', function() {
         .pipe(browserSync.stream());
 });
 
-// Font Awesome Webfonts
-gulp.task('icons', function() {
-    return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
-        .pipe(gulp.dest('source/statics/webfonts/'));
-});
-
 // Static Server + watching js/erb files
 gulp.task('serve', function() {
 
     browserSync.init({
         open: false,
-        // ui: false,
         logLevel: "silent"
     });
 
     
     gulp.watch(['source/statics/js/custom.js'], gulp.series(['js'])).on('change', browserSync.reload);
-    gulp.watch('source/**/*.erb').on('change', browserSync.reload);
+
 });
 
-gulp.task('default', gulp.parallel('js','icons','serve'));
+gulp.task('default', gulp.parallel('js','serve'));
