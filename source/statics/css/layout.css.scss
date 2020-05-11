@@ -187,7 +187,30 @@ main {
                 }
             }
         }
+        #fonts {
+            .bs-component+.bs-component {
+                margin-top: 1rem;
+            }
+            h1 {
+                padding: 2rem 0;
+            }
+            .progress {
+                margin-bottom: 10px;
+            }
+            .modal {
+                position: relative;
+                top: auto;
+                right: auto;
+                left: auto;
+                bottom: auto;
+                z-index: 1;
+                display: block;
+            }
+        }
         #icons {
+            h2 {
+                padding: 2rem 0;
+            }
             i {
                 font-size: 2rem;
                 padding: .5rem;
