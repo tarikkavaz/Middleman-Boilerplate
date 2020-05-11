@@ -1,7 +1,7 @@
 ---
 layout: "layout-en"
 title: Remote JSON data with data_source
-description: Data from data/food.json & data/people.yml See source/statics/js/custom.js.
+description: Data from https://newtablab.com/test/db.json. See source/pages/json_data_source.*.html.erb and config.rb.
 ---
 <% content_for :lang_url do %>/tr/json_data_source/<% end %>
 <% content_for :lang_title do %>Türkçe<% end %>
@@ -17,15 +17,15 @@ description: Data from data/food.json & data/people.yml See source/statics/js/cu
             <%= partial "partials/_leftmenu-en" %>
         </div>
         <div class="col-lg-9 order-1 order-lg-2">
-            <p>Data from <code>data/food.json</code> & <code>data/people.yml</code> See <code>source/statics/js/custom.js</code>.</p>
+            <p>Data from <code>https://newtablab.com/test/db.json</code>.<br>See <code>source/pages/json_data_source.*.html.erb</code> and <code>config.rb</code>.</p>
             <hr>
             <ol>
-                <% data.food.fruits.each do |z| %>
+                <% data.my_remote_json.fruits.each do |z| %>
                 <li><%= z %></li>
                 <% end %>
             </ol>
             <ul>
-                <% data.people.friends.each do |f| %>
+                <% data.my_remote_json.people.each do |f| %>
                 <li><%= f %></li>
                 <% end %>
             </ul>
