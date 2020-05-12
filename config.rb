@@ -36,11 +36,7 @@ activate :directory_indexes
 
 activate :data_source do |c|
   c.root  = "https://newtablab.com/test"
-  c.sources = [
-    { alias: "testdb",
-      path: "db.json",
-      type: :json }
-  ]
+  c.files = { "db.json" => "my_remote_json" }
 end
 
 configure :build do
