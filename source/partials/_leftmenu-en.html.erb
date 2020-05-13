@@ -6,6 +6,7 @@
             <div class="collapse <%= yield_content :subm1_show %>" id="submenu1" aria-expanded="false">
                 <ul class="flex-column nav">
                     <%= nav_item_link_to 'JSON with data_source', '/en/json_data_source/', :class => 'nav-link'  %>
+                    <%= nav_item_link_to 'JSON with Middleman data', '/en/json_local_data/', :class => 'nav-link'  %>
                     <li class="nav-item">
                         <a class="nav-link collapsed" href="#submenu1sub1" data-toggle="collapse" data-target="#submenu1sub1">Submenu Sub</a>
                         <div class="collapse <%= yield_content :subm1a_show %>" id="submenu1sub1" aria-expanded="false">
