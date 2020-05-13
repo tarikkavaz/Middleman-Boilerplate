@@ -9,6 +9,7 @@ activate :livereload
 activate :i18n, :mount_at_root => false, :templates_dir => "pages"
 redirect 'index.html', to: '/en/'
 
+config[:host] = "https://domain.com"
 config[:sitename] = "Middleman Boilerplate"
 
 # BLog, Data, Serve, Build, Deploy
