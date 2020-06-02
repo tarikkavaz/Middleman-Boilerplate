@@ -10,5 +10,6 @@ gem 'middleman-blog', '~> 4.0'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 gem 'builder', '~> 3.0'
 gem 'nokogiri'
+gem "activesupport", ">= 5.2.4.3"
 gem 'middleman-rsync'
 gem 'middleman-data_source'
