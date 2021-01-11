@@ -116,7 +116,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     rexml (3.2.4)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -144,7 +144,7 @@ DEPENDENCIES
   middleman-minify-html
   middleman-rsync
   nokogiri
-  redcarpet (~> 3.3, >= 3.3.3)
+  redcarpet (~> 3.5)
 
 BUNDLED WITH
    2.1.4

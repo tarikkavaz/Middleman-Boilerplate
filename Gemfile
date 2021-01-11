@@ -7,7 +7,7 @@ gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-blog', '~> 4.0'
-gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+gem 'redcarpet', '~> 3.5'
 gem 'builder', '~> 3.0'
 gem 'nokogiri'
 gem "activesupport", ">= 5.2.4.3"
