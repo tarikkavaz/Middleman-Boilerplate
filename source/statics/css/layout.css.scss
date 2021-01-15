@@ -1,5 +1,7 @@
 @import "imports";
-
+html, body {
+    overscroll-behavior: none;
+}
 html {
     position: relative;
     min-height: 100vh;
