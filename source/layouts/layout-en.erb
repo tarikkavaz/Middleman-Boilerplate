@@ -14,6 +14,7 @@
     <%= partial "partials/_footer-en" %>
 
     <%= javascript_include_tag "site" %>
+    <%= yield_content :page_js if content_for?(:page_js) %>
 </body>
 
 </html>
