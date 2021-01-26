@@ -31,6 +31,8 @@
     "gulp-minify-css": "^1.2.4",
     "gulp-sass": "^4.0.2",
     "gulp-terser": "^1.2.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "gulp-sourcemaps": "^2.6.5",
+    "socket.io": ">=2.4.0",
+    "axios": ">=0.21.1"
   }
 }
