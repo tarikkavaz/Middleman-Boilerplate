@@ -7,6 +7,11 @@ description: Data from https://newtablab.com/test/db.json See source/statics/js/
 <% content_for :lang_title do %>English<% end %>
 <% content_for :subm1_show do %>show<% end %>
 <% content_for :subm1a_show do %>show<% end %>
+<% content_for :page_js do %>
+  <script>
+    $(document).ready(function () { remote_json_fetch(); });
+  </script>
+<% end %>
 
 <div class="container" id="content">
     <div class="row">
