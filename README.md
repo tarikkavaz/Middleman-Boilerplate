@@ -14,7 +14,7 @@ Samples for:
 
 Runs on:
 
-- Ruby v2.6.2
+- Ruby v2.6.0
 - Middleman v4.3.6
 - Bootstrap v4.4.1
 - jQuery v3.5.1
@@ -35,9 +35,11 @@ Runs on:
     ```
     brew install rbenv
     ```
-- Install Ruby v2.6.2:
+- Install Ruby v2.6.0:
     ```
-    rbenv install 2.6.2
+    rbenv install 2.6.0
+    # if installed
+    rbenv local 2.6.0
     ```
 - Install [Middleman](https://middlemanapp.com/):
   
